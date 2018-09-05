@@ -3,11 +3,6 @@
     return confirm("Are you sure you want to delete this item?");
 }
 
- //   function to prompt the admin to accept an order
- function confirmAccept(){
-    return confirm("Order has been accepted!");
-}
-
  //   function to prompt the admin to reject an order 
  function confirmReject(){
     return confirm("Order has been rejected!");
