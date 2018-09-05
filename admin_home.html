@@ -1,0 +1,83 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Order</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/tablesearch.css">
+    
+</head>
+<body>
+<!-- start of nav bar  -->
+	<div class="header">
+		<ul>
+			<li><img class="logo" src="assets/images/logo.png"></li>
+			<li><a href="admin_home.html">Fast-Foods-Fast</a></li>
+			<li class="home-tag"><a href="admin_home.html">Manage Oders</a></li>
+            <li class="home-tag"><a href="admin_manage_orders.html">List of Oders</a></li>
+            <li class="home-tag"><a href="mark_order_complete.html">Mark Oders</a></li>
+			<li class="logout-tag"><a href="admin_login.html">Logout</a></li>
+		</ul>
+    </div>
+<!-- end of nav bar  -->
+
+<!-- start of the content area to display a table -->
+	<div class="home-content">
+        <p class="admin_dashboard">ADMIN DASHBOARD TO ADD, EDIT AND DELETE ITEMS</p>
+        <div>
+            <button><a href="admin_add_items.html">Add Food Items</a></button>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for items by ID Number" title="Type in the ID Number">
+        </div>
+
+        <table id="myTable">
+            <tr>
+                <th>ID Number</th>
+                <th>Item Name</th>
+                <th>Item Quantity</th>
+                <th>Item Rate</th>
+                <th>Images</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>1001</td>
+                <td>chips</td>
+                <td>100</td>
+                <td>15000</td>
+                <td><img src="assets/images/reset.jpeg"/></td>
+                <td>
+                    <a href="#">Edit</a> ||
+                    <a href="#" onclick="return confirmDelete()">Delete</a> 
+                </td>
+            </tr>
+            <tr>
+                <td>1002</td>
+                <td>burgger</td>
+                <td>10</td>
+                <td>1000</td>
+                <td><img src="assets/images/reset.jpeg"/></td>
+                <td>
+                    <a href="#">Edit</a> ||
+                    <a href="#" onclick="return confirmDelete()">Delete</a> 
+                </td>
+            <tr>
+                <td>1003</td>
+                <td>chicken</td>
+                <td>5</td>
+                <td>5000</td>
+                <td><img src="assets/images/reset.jpeg"/></td>
+                <td>
+                    <a href="#">Edit</a> ||
+                    <a href="#" onclick="return confirmDelete()">Delete</a> 
+                </td>
+            </tr>
+        </table>
+        
+    
+    </div>
+<!-- end of the content area to display a table -->
+
+<!-- search items in a table -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>
