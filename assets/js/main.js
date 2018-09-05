@@ -23,6 +23,11 @@ function shoppingCart(){
   return confirm("Contains items waiting for checkout!");
 }
 
+//   function to to add items by admin 
+function addItems(){
+  return confirm("Items successfully added!");
+}
+
 // function to search an item by Id number
 function myFunction() {
     var input, filter, table, tr, td, i;
