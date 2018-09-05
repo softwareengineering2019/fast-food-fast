@@ -12,7 +12,7 @@
                 <li><a href="home.html">Fast-Foods-Fast</a></li>
                 <li class="home-tag"><a href="home.html">Make Order</a></li>
                 <li class="logout-tag"><a href="user_history.html">Order History</a></li>
-                <li class="home-tag"><a href="#">Shopping Order</a></li>
+                <li class="home-tag"><a href="#" onclick="return shoppingCart()">Shopping Order</a></li>
                 <li class="logout-tag"><a href="index.html">Logout</a></li>
             </ul>
         </div>
@@ -30,12 +30,13 @@
                 <label for="amount">Amount</label>
                 <input type="number"   placeholder="amount">
                 <div>
-                    <input type="submit" value="Add To Cart & Checkout">
+                    <input type="submit" onclick="return placeOrder()" value="Add To Cart & Checkout">
                 </div>
                 
                 </form>
             </div>
             </div>
         </div>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
