@@ -58,6 +58,15 @@ div.form-wrap input#field{
 	width: 100%;
 }
 
+div.form-wrap input#email{
+	border: 1px;
+	background-color: rgba(218, 197, 197, 0);
+	padding: 15px 0px 15px 5px;
+	color: white;
+	border-bottom: 1px solid #F9E79F;
+	width: 100%;
+}
+
 div.form-wrap input[type="checkbox"]{
 	margin-top: 15px;
 	border: none;

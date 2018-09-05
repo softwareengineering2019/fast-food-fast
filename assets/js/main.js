@@ -13,6 +13,16 @@
     return confirm("Order has been marked as Complete!");
 }
 
+//   function to prompt the admin to mark order as completed 
+function editItems(){
+  return confirm("Item has been successfully updated!");
+}
+
+//   function to to add items in shopping cart 
+function shoppingCart(){
+  return confirm("Contains items waiting for checkout!");
+}
+
 // function to search an item by Id number
 function myFunction() {
     var input, filter, table, tr, td, i;
@@ -31,3 +41,18 @@ function myFunction() {
       }       
     }
   }
+
+// function to authenticate users and admin
+function authenticateUsers(){
+  var email = document.querySelector("#email").value;
+  var password = document.querySelector("#field").value;
+  if(email==='user@gmail.com' && password ==="user123"){
+     window.location.href ="home.html";
+  }else if(email==='admin@gmail.com' && password ==="admin123"){
+    var email = document.querySelector("#email").value;
+    var password = document.querySelector("#field").value;
+    window.location.href ="admin_home.html";
+
+  }
+}
+  
