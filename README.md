@@ -1,4 +1,8 @@
 # fast-food-fast
 Fast-Food-Fast is a food delivery service application for a restaurant.
-To access the user side refer to index.html page.
-To access admin side refer to admin_login.html 
+
+Use the following credentials to access the system(In this case i defined my credentials using javascript)
+
+To access the user side use (email="user@gmail.com" && password="user123").
+
+To access admin side use (email="admin@gmail.com" && password="admin123").
