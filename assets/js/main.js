@@ -28,6 +28,11 @@ function addItems(){
   return confirm("Items successfully added!");
 }
 
+//   function to place order 
+function placeOrder(){
+  return confirm("Order successfully placed!");
+}
+
 // function to search an item by Id number
 function myFunction() {
     var input, filter, table, tr, td, i;
