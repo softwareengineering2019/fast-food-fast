@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Order</title>
+	<title>Add Items</title>
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 </head>
 <body>
@@ -24,7 +24,7 @@
         <p class="admin_dashboard">ADMIN DASHBOARD TO ADD ITEMS</p>
             <div class="container">
                 <div>
-                <form action="">
+                <form>
                 <label for="item_name">Item Name</label>
                 <input type="text"  name="firstname" placeholder="Please enter item name..">
 
@@ -38,15 +38,15 @@
                    Choose an image for a particular item!
                      <span><input type="file" id="myfile" name="myfile"></span>
                 </label>
-
+                <!-- add onclick listener to call a function -->
                 <input type="submit" onclick="return addItems()" value="Add Item">
                 
                 </form>
             </div>
-       
-        
-    
     </div>
+<!-- end of content area -->
+
+<!-- link javascript to the page -->
 <script src="assets/js/main.js"></script>
 </body>
 </html>
