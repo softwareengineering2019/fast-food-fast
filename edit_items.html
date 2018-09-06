@@ -24,12 +24,13 @@
         <p class="admin_dashboard">ADMIN DASHBOARD TO ADD ITEMS</p>
             <div class="container">
                 <div>
-                <form action="">
+                    <!-- start of the form -->
+                <form>
                 <label for="item_name">Item Name</label>
-                <input type="text"  name="firstname" value="Chips">
+                <input type="text"  name="firstname" value="Pizza">
 
                 <label for="quantity">Quantity</label>
-                <input type="number"   value="100">
+                <input type="number"   value="10">
 
                 <label for="rate">Rate</label>
                 <input type="number"   value="15000">
@@ -38,15 +39,16 @@
                    Choose an image for a particular item!
                      <span><input type="file" id="myfile" name="myfile"></span>
                 </label>
-
+              <!-- triger a function on click edit item -->
                 <input type="submit" onclick="editItems()" value="Edit Item">
                 
                 </form>
+                <!-- end of form -->
             </div>
-       
-        
-    
     </div>
+<!-- end of the content area to display a table -->
+
+<!-- link javascript -->
 <script src="assets/js/main.js"></script>
 </body>
 </html>
