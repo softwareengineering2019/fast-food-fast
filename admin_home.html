@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Order</title>
+    <title>Order</title>
+    <!-- link css -->
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="assets/css/tablesearch.css">
     
@@ -29,49 +30,110 @@
             <button><a href="admin_add_items.html">Add Food Items</a></button>
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for items by ID Number" title="Type in the ID Number">
         </div>
-
+       <!-- start of the table -->
         <table id="myTable">
             <tr>
+                <!-- start of table header -->
                 <th>ID Number</th>
                 <th>Item Name</th>
                 <th>Item Quantity</th>
-                <th>Item Rate</th>
+                <th>Item Rate @ Plate</th>
                 <th>Images</th>
                 <th>Action</th>
+                <!-- end of table header -->
             </tr>
             <tr>
+                <!-- start of table data -->
                 <td>1001</td>
-                <td>chips</td>
-                <td>100</td>
+                <td>Pizza</td>
+                <td>10</td>
                 <td>15000</td>
-                <td><img src="assets/images/reset.jpeg"/></td>
+                <td><img src="assets/images/8.jpeg"/></td>
                 <td>
                     <a href="edit_items.html">Edit</a> ||
                     <a href="#" onclick="return confirmDelete()">Delete</a> 
                 </td>
+                 <!-- End of table data -->
             </tr>
             <tr>
+                 <!-- start of table data -->
                 <td>1002</td>
-                <td>burgger</td>
-                <td>10</td>
-                <td>1000</td>
-                <td><img src="assets/images/reset.jpeg"/></td>
+                <td>Chicken nuggets</td>
+                <td>18</td>
+                <td>20000</td>
+                <td><img src="assets/images/9.jpeg"/></td>
                 <td>
                     <a href="edit_items.html">Edit</a> ||
                     <a href="#" onclick="return confirmDelete()">Delete</a> 
                 </td>
+                 <!-- End of table data -->
             <tr>
+                 <!-- start of table data -->
                 <td>1003</td>
-                <td>chicken</td>
+                <td> nuggets</td>
+                <td>50</td>
+                <td>25000</td>
+                <td><img src="assets/images/11.jpeg"/></td>
+                <td>
+                    <a href="edit_items.html">Edit</a> ||
+                    <a href="#" onclick="return confirmDelete()">Delete</a> 
+                </td>
+                 <!-- End of table data -->
+            </tr>
+            <tr>
+                 <!-- start of table data -->
+                <td>1004</td>
+                <td>Burger</td>
                 <td>5</td>
                 <td>5000</td>
-                <td><img src="assets/images/reset.jpeg"/></td>
+                <td><img src="assets/images/12.jpeg"/></td>
                 <td>
                     <a href="edit_items.html">Edit</a> ||
                     <a href="#" onclick="return confirmDelete()">Delete</a> 
                 </td>
+                 <!-- End of table data -->
+            </tr>
+            <tr>
+                 <!-- start of table data -->
+                <td>1005</td>
+                <td>Chappats</td>
+                <td>20</td>
+                <td>2000</td>
+                <td><img src="assets/images/13.jpg"/></td>
+                <td>
+                    <a href="edit_items.html">Edit</a> ||
+                    <a href="#" onclick="return confirmDelete()">Delete</a> 
+                </td>
+                 <!-- End of table data -->
+            </tr>
+            <tr>
+                 <!-- start of table data -->
+                <td>1006</td>
+                <td>Ice Cream</td>
+                <td>30</td>
+                <td>5000</td>
+                <td><img src="assets/images/14.jpg"/></td>
+                <td>
+                    <a href="edit_items.html">Edit</a> ||
+                    <a href="#" onclick="return confirmDelete()">Delete</a> 
+                </td>
+                 <!-- End of table data -->
+            </tr>
+            <tr>
+                 <!-- start of table data -->
+                <td>1006</td>
+                <td>Popcorns</td>
+                <td>200</td>
+                <td>8000</td>
+                <td><img src="assets/images/15.jpg"/></td>
+                <td>
+                    <a href="edit_items.html">Edit</a> ||
+                    <a href="#" onclick="return confirmDelete()">Delete</a> 
+                </td>
+                 <!-- End of table data -->
             </tr>
         </table>
+        <!-- end of table -->
         
     
     </div>
