@@ -22,7 +22,7 @@ Configuration instructions:
 For one to use this application, a computer, smartphone, browser and a steady internet connection are required.
 
 Contact information for the programmer:
-Name: Kisuule James
+Name: Kisuule James.
 Email: getjames20@gmail.com
 
 Credits and acknowledgement:
