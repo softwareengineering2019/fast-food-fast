@@ -9,9 +9,9 @@ from views import GetOrder
 Order = GetOrder()
 client = APP.test_client
 
-def test_get_specific_order():
+def test_get_orders():
     """
-    method to test a specific order.
+    method to test all orders.
     """
-    myresult = client().get('/api/v1/orders/1')
-    assert myresult.status_code == 200
+    result = client().get('/api/v1/orders')
+    assert result.status_code == 200

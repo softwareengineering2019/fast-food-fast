@@ -17,4 +17,4 @@ class GetUrls:
         Method that views with urls
         """
         orders_view = GetOrder.as_view('orders')
-        app.add_url_rule('/api/v1/orders/<int:order_id>', view_func=orders_view, methods=['GET'])
+        app.add_url_rule('/api/v1/orders', view_func=orders_view, methods=['GET'])
