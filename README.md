@@ -1,1 +1,0 @@
-[![Build Status](https://travis-ci.org/softwareengineering2019/fast-food-fast.svg?branch=development)](https://travis-ci.org/softwareengineering2019/fast-food-fast)
