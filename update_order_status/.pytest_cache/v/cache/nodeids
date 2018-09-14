@@ -1,0 +1,7 @@
+[
+  "test_case.py::test_get_orders",
+  "test_case.py::test_get_specific_order",
+  "test_case.py::test_if_data_posted_is_in_form_of_json",
+  "test_case.py::test_update_order",
+  "test_case.py::test_if_parameter_passed_to_function_is_a_string"
+]
