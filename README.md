@@ -1,2 +1,2 @@
 Travis Badge
-https://travis-ci.org/softwareengineering2019/fast-food-fast.svg?branch=finished_api
+[![Build Status](https://travis-ci.org/softwareengineering2019/fast-food-fast.svg?branch=finished_api)](https://travis-ci.org/softwareengineering2019/fast-food-fast)
