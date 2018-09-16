@@ -23,9 +23,9 @@ def test_get_specific_order():
     myresult = CLIENT().get('/api/v1/orders/1')
     assert myresult.status_code == 200
 
-def test_if_data_posted_is_in_form_of_json():
+def test_if_data_is_in_json():
     """
-    method to test whether data posted is in json format.
+    method to test whether data is in json format.
     """
     results = CLIENT().post('/api/v1/orders', content_type='application/json', data=json.dumps(
         {
@@ -42,7 +42,7 @@ def test_update_order():
                            data=json.dumps({"status": "decline"}))
     assert results.status_code == 200
 
-def test_if_parameter_passed_to_function_is_a_string():
+def test_if_argument_passed_is_a_string():
     """
     method to whether the parameter passed is a string.
     """

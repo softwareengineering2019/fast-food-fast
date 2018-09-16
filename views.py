@@ -9,26 +9,38 @@ class GetOrder(MethodView):
         {
             "id": 1,
             "list of items": [{
-                "amount": 5650,
+                "amount": 10000,
                 "item_id": 1,
-                "item_name": "Chicken",
-                "quantity": 2,
-                "rate": 5
+                "item_name": "Burger",
+                "quantity": 4,
+                "rate": 2500
             }],
-            "status": "True00",
-            "username": "James"
+            "status": "Completed",
+            "username": "James Kisuule"
         },
         {
             "id": 2,
             "list of items": [{
-                "amount": 5650,
-                "item_id": 1,
+                "amount": 6000,
+                "item_id": 2,
                 "item_name": "Chicken",
                 "quantity": 2,
-                "rate": 5
+                "rate": 3000
             }],
-            "status": "True",
-            "username": "James"
+            "status": "Rejected",
+            "username": "Kalyesubula Noah"
+            },
+             {
+            "id": 3,
+            "list of items": [{
+                "amount": 20000,
+                "item_id": 3,
+                "item_name": "Chips",
+                "quantity": 4,
+                "rate": 5000
+            }],
+            "status": "Accepted",
+            "username": "Ssevume Ronald"
             }
         ]
     def get(self, order_id):
