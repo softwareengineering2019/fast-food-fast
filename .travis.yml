@@ -10,7 +10,7 @@ install:
 - pip install coveralls
 # command to run tests
 script:
-- pytest --cov=project test_case/
+- pytest --cov=.
 - coverage
 - coveralls
 after_success:
