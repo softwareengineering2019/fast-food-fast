@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-This is the main module for running the application
+module for running the application
 """
 from flask import Flask
 from urls import GetUrls

@@ -1,9 +1,11 @@
-""" This module defines views """
+""" 
+module that defines views
+ """
 from flask import jsonify, request
 from flask.views import MethodView
 class GetOrder(MethodView):
     """
-    This class  defines views
+    class that  defines views
     """
     orders = [
         {

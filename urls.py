@@ -11,7 +11,7 @@ class GetUrls:
     @staticmethod
     def fetch_urls(app):
         """
-        Method that views with urls
+        Method that views  urls
         """
         orders_view = GetOrder.as_view('orders')
         app.add_url_rule('/api/v1/orders', view_func=orders_view,

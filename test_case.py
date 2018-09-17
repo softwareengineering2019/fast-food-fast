@@ -1,5 +1,5 @@
 """
-import packages fromflask
+import packages from flask
 """
 from flask import json
 import pytest
@@ -16,7 +16,7 @@ def test_get_orders():
     result = CLIENT().get('/api/v1/orders')
     assert result.status_code == 200
 
-def test_get_specific_order():
+def test_specific_order():
     """
     method to test a specific order.
     """
@@ -44,7 +44,7 @@ def test_update_order():
 
 def test_if_argument_passed_is_a_string():
     """
-    method to whether the parameter passed is a string.
+    method to test whether the parameter passed is a string.
     """
     with pytest.raises(TypeError):
-        ORDER.get("andela")
+        ORDER.get("Andela")
