@@ -14,3 +14,7 @@ Project Overview: Fast-Food-Fast is a food delivery service application for a re
 Github repository can be found at:https://github.com/softwareengineering2019/fast-food-fast
 
 PivotalTracker link: https://www.pivotaltracker.com/n/projects/2195208
+
+USAGE AND CAPABILITIES
+Currently this API enable users or customers to place new orders for fast foods.
+It also enables an Admin to get all the available orders, fetch specific order and update the order status.
