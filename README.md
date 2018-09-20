@@ -16,5 +16,6 @@ Github repository can be found at:https://github.com/softwareengineering2019/fas
 PivotalTracker link: https://www.pivotaltracker.com/n/projects/2195208
 
 USAGE AND CAPABILITIES
+
 Currently this API enable users or customers to place new orders for fast foods.
-It also enables an Admin to get all the available orders, fetch specific order and update the order status.
+It also enables an Admin to get available orders, fetch specific order and update the order status.
