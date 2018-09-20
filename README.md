@@ -6,3 +6,5 @@
 
 #code climate
 [![Maintainability](https://api.codeclimate.com/v1/badges/b8f7a2b1c97bdd54b255/maintainability)](https://codeclimate.com/github/softwareengineering2019/fast-food-fast/maintainability)
+
+FAST_FOOD_FAST
