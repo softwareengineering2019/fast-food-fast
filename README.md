@@ -7,8 +7,7 @@
 #code climate
 [![Maintainability](https://api.codeclimate.com/v1/badges/b8f7a2b1c97bdd54b255/maintainability)](https://codeclimate.com/github/softwareengineering2019/fast-food-fast/maintainability)
 
-FAST-FOOD-FAST
-NAME OF THE APPLICATION: Fast-Food-Fast.
+NAME OF THE APPLICATION: FAST-FOOD-FAST.
 
 Project Overview: Fast-Food-Fast is a food delivery service application for a restaurant. This application was created for all users who wish to order food items online. This application was created in 2018 by Kisuule James a software engineer who has just completed his bachelor's degree of science in software engineering at makerere university. The live demo for this project can be found at: https://softwareengineering2019.github.io/fast-food-fast/
 
