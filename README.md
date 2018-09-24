@@ -1,5 +1,5 @@
 # fast-food-fast
-##c Name of the project: ##
+## Name of the project: ##
 Fast-Food-Fast.
 
 ## Project Overview: ##
