@@ -8,9 +8,9 @@ Fast-Food-Fast is a food delivery service application for a restaurant. This app
 ```bash
 https://softwareengineering2019.github.io/fast-food-fast/
 ```
-```bash
 
 ## Github repository can be found at: ##
+```bash
 https://github.com/softwareengineering2019/fast-food-fast
 ```
 
