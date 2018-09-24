@@ -3,8 +3,8 @@ import packages from flask and
 """
 from flask import json
 import pytest
-from app import APP
-from views import GetOrder
+from api.views import GetOrder
+from run import APP
 
 ORDER = GetOrder()
 CLIENT = APP.test_client
