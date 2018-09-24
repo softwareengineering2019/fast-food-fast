@@ -16,10 +16,14 @@ https://www.pivotaltracker.com/n/projects/2195208
 ## Project usage: ##
 This project is divided into two parts:
 1). The user side where a user is able to create and log into the system, make an order and view order history. 
+```bash
 To access the user side use ==>>>>(email="user@gmail.com" && password="user123").
+```
 
 2). The admin side where an admin is able to log into the system, add, edit, delete, reject, approve, see list of orders and mark order as complete.
+```bash
 To access admin side use ==>>>>(email="admin@gmail.com" && password="admin123").
+```
 
 ## Configuration instructions: ##
 For one to use this application, a computer, smartphone, browser and a steady internet connection are required.
