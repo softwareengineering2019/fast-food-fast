@@ -23,7 +23,9 @@ Currently this API enable users or customers to place new orders for fast foods.
 It also enables an Admin to get available orders, fetch specific order and update the order status.
 
 ## Contact information for the programmer: ##
+```bash
 Name: Kisuule James. Email: getjames20@gmail.com
+```
 
 ## Credits and acknowledgement: ## 
 My credit goes to the Andela team that have given me this opportunity to exercise my abilities plus my friends in the same struggle that have given me technical knowledge.
