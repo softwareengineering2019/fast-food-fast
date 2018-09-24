@@ -91,6 +91,7 @@ div.form-wrap button{
 div.form-wrap button a{
 	text-decoration: none;
 	display:block;
+	color: red;
 }
 
 div.form-wrap p{
@@ -120,7 +121,7 @@ div.info .head1{
 
 div.info .head4{
 	font-size: 30px;
-	color: hotpink;
+	color: red;
 	padding-top: 0px;
 	margin-top: 0px;
 	text-align: left;
@@ -134,7 +135,7 @@ div.info .head4{
 }
 
 ::placeholder {
-    color: gold;
+    color: red;
 	opacity: 1;
 }
 
@@ -151,6 +152,7 @@ div.info button{
 div.info button a{
 	text-decoration: none;
 	display:block;
+	color: red;
 }
 
 div.header{
@@ -223,19 +225,24 @@ div.home-content{
 	position: absolute;
 	top: 25%;
 	left: 10%;
-	background-color: #ecdfdf;
+	background-color: #382f2f;
 	z-index: 99;
-	width: 80%;
+	width: 81%;
 	padding: 10px;
 	border: 1px solid silver;
 	margin-bottom: 20px;
+}
+
+div.home-content, h3{
+	color:white;
+
 }
 
 /* home content images */
 #green {
 	width: 200px;
 	height: 200px;
-    border: 1px solid hotpink;
+    border: 1px solid white;
     float: left;
     margin: 5px;
 }
@@ -246,23 +253,27 @@ div.home-content{
 }
 /* admin dashbord home */
 #green, p{
-	color: hotpink;
+	color:black;
 	padding-bottom: 27px;
 	text-align: center;
 	vertical-align: text-top;
-	
+}
 
+#green, a{
+	color:white;
+	padding-bottom: 27px;
+	text-align: center;
+	vertical-align: text-top;
 }
 
 /* table css */
 table,th,td
 	{
-		border:1px solid silver;
+		border:1px solid #382f2f;
 	}
 	th{
-		color: rgb(125, 98, 167);
+		color: red;
 		font-size: 20px;
-
 	}
 	th, td
 	{
@@ -280,7 +291,7 @@ button {
 input[type=text ],[type=number] ,select{
     width: 100%;
     padding: 12px;
-    border: 1px solid hotpink;
+    border: 1px solid red;
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 3px;
@@ -288,8 +299,8 @@ input[type=text ],[type=number] ,select{
 }
 
 input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
+    background-color: white;
+    color: red;
     padding: 8px 15px;
     border: none;
     border-radius: 4px;
@@ -300,7 +311,7 @@ input[type=submit] {
 
 .container {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color:#382f2f ;
     padding: 20px;
 }
 /* END OF ORDER FORM */
