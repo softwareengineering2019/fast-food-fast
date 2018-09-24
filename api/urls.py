@@ -2,7 +2,7 @@
 """
 This module assigns views to urls
 """
-from views import GetOrder
+from api.views import GetOrder
 
 class GetUrls:
     """
