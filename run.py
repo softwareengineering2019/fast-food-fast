@@ -11,3 +11,4 @@ GetUrls.fetch_urls(APP)
 if __name__ == '__main__':
     """ This keeps the serve running"""
     APP.run(debug=True)
+    
