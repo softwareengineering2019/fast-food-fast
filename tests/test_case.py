@@ -38,8 +38,8 @@ def test_update_order():
     """
     method to test an update on a specific order.
     """
-    results = CLIENT().put('/api/v1/orders/2', content_type='application/json',
-                           data=json.dumps({"status": "decline"}))
+    results = CLIENT().put('/api/v1/orders/1', content_type='application/json',
+                           data=json.dumps({"status": None}))
     assert results.status_code == 200
 
 def test_if_argument_passed_is_a_string():

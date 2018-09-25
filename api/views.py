@@ -7,20 +7,8 @@ class GetOrder(MethodView):
     """
     class that  defines views
     """
-    orders = [
-        {
-            "id": 1,
-            "list of items": [{
-                "amount": 10000,
-                "item_id": 1,
-                "item_name": "Burger",
-                "quantity": 4,
-                "rate": 2500
-            }],
-            "status": "Completed",
-            "username": "James Kisuule"
-        }
-        ]
+    orders = []
+    
     def get(self, order_id):
         """
          method to get all or specific orders.
