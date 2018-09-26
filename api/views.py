@@ -32,11 +32,11 @@ class GetOrder(MethodView):
         list_of_items = request.json['list_item']
         if  list_of_items[0]['item_name'] == "":
             return jsonify({'error':'item name is missing!'}), 403
-        elif  list_of_items[0]['rate'] == "":
+        if  list_of_items[0]['rate'] == "":
             return jsonify({error}), 400
-        elif  list_of_items[0]['quantity'] == "":
+        if  list_of_items[0]['quantity'] == "":
             return jsonify({error}), 400
-        elif  list_of_items[0]['amount'] == "":
+        if  list_of_items[0]['amount'] == "":
             return jsonify({error}), 400
         usern = request.json['username']
         status = request.json['status']
