@@ -30,14 +30,15 @@ class GetOrder(MethodView):
         """
         list_of_items = []
         list_of_items = request.json['list_item']
+        rate = list_of_items[0]['rate'] 
+        quantity = list_of_items[0]['quantity']
+        amount = list_of_items[0]['amount'] 
+        if rate == "" or quantity == "" or amount=="":
+            return jsonify({error}), 400
+
         if  list_of_items[0]['item_name'] == "":
             return jsonify({'error':'item name is missing!'}), 403
-        if  list_of_items[0]['rate'] == "":
-            return jsonify({error}), 400
-        if  list_of_items[0]['quantity'] == "":
-            return jsonify({error}), 400
-        if  list_of_items[0]['amount'] == "":
-            return jsonify({error}), 400
+        
         usern = request.json['username']
         status = request.json['status']
         if usern.strip() == "":
