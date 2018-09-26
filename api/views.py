@@ -61,6 +61,8 @@ class GetOrder(MethodView):
                     some_json = request.get_json()
                     order['status'] = some_json['status']
                     return jsonify({"Updated list of dictionary":order}), 200
+        elif id == "":
+            return ({error}), 404
         else:
-            return "You didn't specify an id"
+            return({error}), 405
  

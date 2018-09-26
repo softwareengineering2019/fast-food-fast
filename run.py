@@ -10,20 +10,17 @@ APP.testing = True
 GetUrls.fetch_urls(APP)
 
 @APP.errorhandler(405)
-def url_not_found(error):
-    return jsonify({'message':'Requested method not allowed'}), 405
+def method_not_allowed(error):
+    return jsonify({'message':'Requested method not allowed or specify an integer id to fetch the exact order for an update'}), 405
 
 @APP.errorhandler(400)
-def url_not_found_1(error):
+def field_missing(error):
     return jsonify({'message':'One of the required fields is empty, please fill all the fields'}), 400
 
 @APP.errorhandler(404)
 def page_not_found(error):
-    return jsonify({'message':'page not found, check the url'}), 404
-
-@APP.errorhandler(500)
-def internal_error(error):
-    return "500 error"
+    return jsonify({'message':'page not found or input an integer id'}), 404
+    
 
 if __name__ == '__main__':
     """ This keeps the serve running"""
