@@ -13,6 +13,10 @@ GetUrls.fetch_urls(APP)
 def url_not_found(error):
     return jsonify({'message':'Requested method not allowed'}), 405
 
+@APP.errorhandler(400)
+def url_not_found_1(error):
+    return jsonify({'message':'One of the required fields is empty, please fill all the fields'}), 400
+
 @APP.errorhandler(404)
 def page_not_found(error):
     return jsonify({'message':'page not found, check the url'}), 404
