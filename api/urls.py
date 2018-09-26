@@ -4,6 +4,7 @@ This module assigns views to urls
 """
 from api.views import GetOrder
 
+
 class GetUrls:
     """
     Method that views with urls
