@@ -18,6 +18,9 @@ https://github.com/softwareengineering2019/fast-food-fast
 ## PivotalTracker link: ##
 https://www.pivotaltracker.com/n/projects/2195208
 
+## Heroku Link ##
+https://fasts-food-fast.herokuapp.com/api/v1/orders
+
 ## USAGE AND CAPABILITIES ##
 * Currently this API enable users or customers to place new orders for fast foods.
 It also enables an Admin to:
