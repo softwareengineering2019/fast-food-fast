@@ -31,7 +31,7 @@ class GetOrder(MethodView):
         list_of_items = []
         list_of_items = request.json['list_item']
         rate = list_of_items[0]['rate'] 
-        quantity = list_of_items[0]['qu`antity']
+        quantity = list_of_items[0]['quantity']
         amount = list_of_items[0]['amount'] 
         if rate == "" or quantity == "" or amount=="":
             return jsonify({error}), 400
