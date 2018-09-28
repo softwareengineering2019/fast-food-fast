@@ -6,7 +6,6 @@ from flask import jsonify
 module for running the application
 """
 APP.env = 'development'
-APP.testing = True
 GetUrls.fetch_urls(APP)
 
 @APP.errorhandler(405)
