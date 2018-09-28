@@ -35,17 +35,14 @@ class GetOrder(MethodView):
         amount = list_of_items[0]['amount'] 
         if rate == "" or quantity == "" or amount=="":
             return jsonify({error}), 400
-
         if  list_of_items[0]['item_name'] == "":
             return jsonify({'error':'item name is missing!'}), 403
-        
         usern = request.json['username']
         status = request.json['status']
         if usern.strip() == "":
             return jsonify({'error':'username is missing, please fill it!'}), 403
         if status == "":
             return jsonify({'error':'Status is empty!'}), 403
-
         order = {"id":len(self.orders) + 1, "username":usern,
                  "list of items":list_of_items, "status":status}
         self.orders.append(order)
