@@ -1,5 +1,12 @@
 {
   "api/tests/test_case.py::LoginRegisterTestCase": true,
   "api/tests/test_case.py::LoginRegisterTestCase::test_user_can_login": true,
-  "api/tests/test_case.py::TestViews::test_sign_with_only_password": true
+  "api/tests/test_case.py::TestViews::test_login": true,
+  "api/tests/test_case.py::TestViews::test_sign_with_an_empty_name": true,
+  "api/tests/test_case.py::TestViews::test_sign_with_an_empty_user_name": true,
+  "api/tests/test_case.py::TestViews::test_sign_with_only_password": true,
+  "api/tests/test_orders.py::TestViews::test_fetch_all_orders": true,
+  "api/tests/test_orders.py::TestViews::test_get_one_specific_order": true,
+  "api/tests/test_orders.py::TestViews::test_get_order_for_specific_user": true,
+  "api/tests/test_orders.py::TestViews::test_post_with_an_empty_fields": true
 }
