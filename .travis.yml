@@ -9,6 +9,8 @@ services:
   - postgresql
 before_script:
   - psql -c 'create database fast_food_fast;'  -U postgres
+  - easy_install distribute
+  - pip install -r requirements.txt
 addons:
   postgresql: "9.5"
 script:
