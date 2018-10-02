@@ -4,6 +4,8 @@
 import unittest
 import json
 import psycopg2
+import os
+import jwt
 from run import APP
 from api.controller.post_menu import PostMenu
 from api.controller.get_menu import GetMenu
@@ -13,7 +15,7 @@ from api.controller.fetch_specific_order import FetchSpecificOrder
 from api.controller.update_order_status import UpdateOrderStatus
 from api.controller.get_all_orders import GetAllOrders
 from api.controller.update_user_roles import UpdateUserRoles
-import os
+
 
 class TestViews(unittest.TestCase):
     """

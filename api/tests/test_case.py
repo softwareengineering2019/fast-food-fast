@@ -4,10 +4,11 @@
 import unittest
 import json
 import psycopg2
+import os, jwt
 from run import APP
 from api.controller.login import LoginUsers
 from api.controller.register import RegisterUsers
-import os
+
 
 class TestViews(unittest.TestCase):
     """"
