@@ -7,9 +7,11 @@ import jwt
 from flask.views import MethodView
 from connect import APP
 from flask import Response
+from api.controller.token_required import token_required
 
 class PlaceOrder(MethodView):
     """ Place an order"""
+    @token_required
     def post(self):
 
         """ place an order and insert in the order table """
