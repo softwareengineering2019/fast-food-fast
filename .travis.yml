@@ -15,7 +15,7 @@ addons:
   postgresql: "9.5"
 script:
   - pytest --cov=.
-  - coverage  
-  - coveralls 
+  # - coverage  
+  # - coveralls 
 # after_success:
 # - coveralls
