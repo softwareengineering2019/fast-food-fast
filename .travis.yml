@@ -15,7 +15,7 @@ before_script:
 addons:
   postgresql: "9.5"
 script:
-  - pytest --cov=.
+  # - pytest --cov=.
   - coverage  
   - coveralls 
   
