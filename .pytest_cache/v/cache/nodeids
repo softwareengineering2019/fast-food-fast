@@ -1,0 +1,3 @@
+[
+  "api/tests/test_case.py::LoginRegisterTestCase::test_user_can_login"
+]

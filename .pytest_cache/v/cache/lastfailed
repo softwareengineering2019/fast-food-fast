@@ -1,0 +1,4 @@
+{
+  "api/tests/test_case.py::LoginRegisterTestCase": true,
+  "api/tests/test_case.py::LoginRegisterTestCase::test_user_can_login": true
+}
