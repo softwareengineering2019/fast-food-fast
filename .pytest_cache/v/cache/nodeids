@@ -1,8 +1,0 @@
-[
-  "api/tests/test_case.py::TestViews::test_sign",
-  "api/tests/test_case.py::TestViews::test_sign_with_other_criedientials",
-  "api/tests/test_orders.py::TestViews::test_adding_an_item_on_menu",
-  "api/tests/test_orders.py::TestViews::test_get_menu",
-  "api/tests/test_orders.py::TestViews::test_place_an__order",
-  "api/tests/test_orders.py::TestViews::test_updating_order_status"
-]

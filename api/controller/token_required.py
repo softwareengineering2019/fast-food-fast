@@ -7,21 +7,28 @@ from db_connection.config import config
 from connect import secret_key
 
 def token_required(f):
-    @wraps(f)
-    def decorated(self, *args, **kwargs):
-        token = None
-        if 'x-access-token' in request.headers:
-            token = request.headers['x-access-token']
-        if not token:
-            return jsonify({'message':'Token is missing!'}),401
-        try:
-            data = jwt.decode(token, secret_key)
-            params = config()
-            conn = psycopg2.connect(**params)
-            cur = conn.cursor()
-            cur.execute("SELECT * FROM accounts WHERE email=%s",(data['email'], ))
-            current_user = cur.fetchall()
-        except:
-            return jsonify({'message':'Invalid Token!'}),401
-        return f(self, current_user, *args, **kwargs)
-    return decorated
+   """This the fuction to be decorated"""
+   @wraps(f)
+   def decorated(*args, **kwargs):
+       """creates thr decorator"""
+       token = None
+
+       if 'Authorization' in request.headers:
+           token = request.headers['Authorization']
+
+       if not token:
+           return jsonify({'message': 'Token is missing!'}), 401
+
+       try:
+           data = jwt.decode(token, 'donttouch')
+           database = Database(app.config['DATABASE_URL'])
+
+           query = database.fetch_by_parameter(
+               'users', 'username', data['username'])
+           current_user = User(query[0], query[1], query[2], query[3], query[4])
+       except:
+           return jsonify({'message': 'Token is invalid!'}), 401
+
+       return f(current_user, *args, **kwargs)
+
+   return decorated

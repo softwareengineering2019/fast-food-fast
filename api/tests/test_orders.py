@@ -30,35 +30,7 @@ class TestViews(unittest.TestCase):
         APP.config['TESTING'] = True
         self.app = APP
 
-    # def test_fetch_all_orders(self):
-    #     """
-    #     Method for testing get all orders by the admin
-    #     """
-    #     result = self.client().get('/api/v2/orders/')
-    #     respond = json.loads(result.data.decode("utf8"))
-    #     self.assertEqual(result.status_code, 200)
-    #     self.assertIn('Orders', respond)
-    #     self.assertIsInstance(respond, dict)
     
-    # def test_get_one_specific_order(self):
-    #     """
-    #         Method for testing to get only one specfic order by the admin
-    #     """
-    #     result = self.client().get('/api/v1/orders/1')
-    #     result2 = self.client().get('/api/v1/orders/a')
-    #     respond = json.loads(result.data.decode("utf8"))
-    #     self.assertEqual(result.status_code, 200)
-    #     self.assertEqual(result2.status_code, 404)
-    #     self.assertIsInstance(respond, dict)
-
-    # def test_get_order_for_specific_user(self):
-    #     """
-    #         Method for testing to get orders for a particular user
-    #     """
-    #     result = self.client().get('/api/v1/users/orders')
-    #     respond = json.loads(result.data.decode("utf8"))
-    #     self.assertEqual(result.status_code, 401)
-    #     self.assertIsInstance(respond, dict)
 
     def test_place_an__order(self):
         """
@@ -68,18 +40,7 @@ class TestViews(unittest.TestCase):
         respond = json.loads(result.data.decode("utf8"))
         self.assertEqual(result.status_code, 401)
         self.assertIsInstance(respond, dict)
-    
-    # def test_post_with_an_empty_fields(self):
-    #     """
-    #         Method for testing the post function for empty fields
-    #     """
-    #     result = self.client().post('/api/v2/users/orders',
-    #                                 content_type="application/json",
-    #                                 data=json.dumps(dict(item_id="")))        
-        
-    #     respond = json.loads(result.data.decode("utf8"))
-    #     self.assertIn('Message', respond)        
-    #     self.assertTrue(result.json["Message"])
+   
 
     def test_get_menu(self):
         """
@@ -112,4 +73,44 @@ class TestViews(unittest.TestCase):
         self.assertIsInstance(respond, dict, )
         
     
+    # def test_fetch_all_orders(self):
+    #     """
+    #     Method for testing get all orders by the admin
+    #     """
+    #     result = self.client().get('/api/v2/orders/')
+    #     respond = json.loads(result.data.decode("utf8"))
+    #     self.assertEqual(result.status_code, 200)
+    #     self.assertIn('Orders', respond)
+    #     self.assertIsInstance(respond, dict)
     
+    # def test_get_one_specific_order(self):
+    #     """
+    #         Method for testing to get only one specfic order by the admin
+    #     """
+    #     result = self.client().get('/api/v1/orders/1')
+    #     result2 = self.client().get('/api/v1/orders/a')
+    #     respond = json.loads(result.data.decode("utf8"))
+    #     self.assertEqual(result.status_code, 200)
+    #     self.assertEqual(result2.status_code, 404)
+    #     self.assertIsInstance(respond, dict)
+
+    # def test_get_order_for_specific_user(self):
+    #     """
+    #         Method for testing to get orders for a particular user
+    #     """
+    #     result = self.client().get('/api/v1/users/orders')
+    #     respond = json.loads(result.data.decode("utf8"))
+    #     self.assertEqual(result.status_code, 401)
+    #     self.assertIsInstance(respond, dict)
+     
+    # def test_post_with_an_empty_fields(self):
+    #     """
+    #         Method for testing the post function for empty fields
+    #     """
+    #     result = self.client().post('/api/v2/users/orders',
+    #                                 content_type="application/json",
+    #                                 data=json.dumps(dict(item_id="")))        
+        
+    #     respond = json.loads(result.data.decode("utf8"))
+    #     self.assertIn('Message', respond)        
+    #     self.assertTrue(result.json["Message"])
