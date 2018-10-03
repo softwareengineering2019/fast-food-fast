@@ -15,3 +15,5 @@ addons:
 script:
   - coverage  
   - coveralls
+after_success:
+ - "coveralls"
