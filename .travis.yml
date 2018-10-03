@@ -9,15 +9,15 @@ services:
   - postgresql
 before_script:
   - psql -c 'create database fast_food_fast;'  -U postgres
-  # - pip install coverage coveralls
-  # - pip install python-coveralls
+  - pip install coverage coveralls
+  - pip install python-coveralls
   
 addons:
   postgresql: "9.5"
-# script:
-#   - pytest --cov=.
-#   - coverage  
-#   - coveralls 
+script:
+  # - pytest --cov=.
+  - coverage  
+  - coveralls 
   
 # after_success:
 # - coveralls
