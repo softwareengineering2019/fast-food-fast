@@ -9,8 +9,6 @@ services:
 install:
   - "pip install -r requirements.txt"
   - psql -c 'create database fast_food_fast;' -U postgres
-  - python create_tables.py
-
 
 # command to run tests
 script:
