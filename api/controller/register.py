@@ -18,16 +18,11 @@ class RegisterUsers(MethodView):
         phone = request.json['phone']
         password = request.json['password']
         if name == "" or email =="" or phone == "" or password == "":
-                return jsonify({'Message':'One of the required fields is empty'}), 400
-        elif email == request.json['email']:
-            return jsonify({'Message':'Email already exists'}), 400
-        elif phone < 10:
-            return jsonify({'Message':'Phone number is less than 10'}), 400
-        elif name or email or phone is type(int):
-            return jsonify({'Message':'Phone number or email or name should be a string'}), 400
+            return jsonify({'Message':'One of the required fields is empty'}), 400
 
         sql = """INSERT INTO accounts(name,email,phone,password)
                 VALUES(%s,%s,%s,%s) RETURNING id;"""
+                
         # for sqls in sql:
         #     if 
         conn = None

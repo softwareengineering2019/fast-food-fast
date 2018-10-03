@@ -1,12 +1,12 @@
 language: python
 python:
-- "3.5.0"
+  "3.5.0"
 install:
-- pip install -r requirements.txt
+  "pip install -r requirements.txt"
 env:
-- TESTING = True
+  - TESTING = True
 services:
-- postgresql
+  - postgresql
 before_script:
   - psql -c 'create database fast_food_fast;'  -U postgres
   - pip install coverage coveralls

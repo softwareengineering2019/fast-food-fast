@@ -16,15 +16,6 @@ class LoginUsers(MethodView):
         
         email=request.json['email']
         password=request.json['password']
-        
-            # missing arguments
-        # if User.query.filter_by(email = email).first() is not None:
-        #     abort(400) # existing user
-        # user = User(email = email)
-        # user.hash_password(password)
-        # db.session.add(user)
-        # db.session.commit()
-        # return jsonify({ 'email': user.email }), 201, {'Location': url_for('get_user', id = user.id, _external = True)}
 
         conn = None
         try:
