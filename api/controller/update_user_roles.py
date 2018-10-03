@@ -25,7 +25,7 @@ class UpdateUserRoles(MethodView):
                 cur.execute("UPDATE accounts SET roles = %s WHERE id = %s", (roles,id,))
                 # commit the changes to the database
                 conn.commit()
-                return jsonify({'message':'Successfully updated the user role to an Admin'}), 200
+                return jsonify({'message':'Successfully updated the user role to an Admin'}), 201
                 # commit the changes to the database
                 conn.commit()
             else:

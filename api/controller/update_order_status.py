@@ -5,7 +5,6 @@ from db_connection.config import config
 import jwt
 from api.controller.token_required import token_required
 
-
 from flask.views import MethodView
 from connect import APP
 

@@ -32,7 +32,7 @@ class PostMenu(MethodView):
             # commit the changes to the database
             conn.commit()
             # close communication with the database
-            return jsonify({'message':'Admin has successfully added meal option to the menu'})
+            return jsonify({'message':'Admin has successfully added meal option to the menu'}), 201
             cur.close()
         except (Exception, psycopg2.DatabaseError) as error:
             print(error)

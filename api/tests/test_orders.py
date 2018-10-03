@@ -30,7 +30,6 @@ class TestViews(unittest.TestCase):
         APP.config['TESTING'] = True
         self.app = APP
 
-    
 
     def test_place_an__order(self):
         """
