@@ -1,24 +1,21 @@
 language: python
 python:
 - '3.5.0'
-install:
-  - pip install -r requirements.txt
-env:
-  - TESTING = True
+
 services:
-  - postgresql
-before_script:
-  - psql -c 'create database fast_food_fast;'  -U postgres
-  - pip install coverage coveralls
-  - pip install python-coveralls
-  - pip install pytest pytest-cov
-  - pip install jwt
-addons:
-  postgresql: "9.5"
+  -postgresql
+
+# command to install dependencies
+install:
+  - "pip install -r requirements.txt"
+  - psql -c 'create database fast_food_fast;' -U postgres
+  - python create_tables.py
+
+
+# command to run tests
 script:
-  - pytest --cov=.
-  - coverage  
-  - coveralls 
-  
-# after_success:
-# - coveralls
+   - pytest -v --cov app --cov-report term-missing
+
+
+after_success:
+  - coveralls
