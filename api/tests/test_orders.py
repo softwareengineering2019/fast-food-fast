@@ -31,14 +31,14 @@ class TestViews(unittest.TestCase):
         self.app = APP
 
 
-    def test_place_an__order(self):
-        """
-            Method for testing to place an order
-        """
-        result = self.client().post('/api/v2/users/orders')
-        respond = json.loads(result.data.decode("utf8"))
-        self.assertEqual(result.status_code, 401)
-        self.assertIsInstance(respond, dict)
+    # def test_place_an__order(self):
+    #     """
+    #         Method for testing to place an order
+    #     """
+    #     result = self.client().post('/api/v2/users/orders')
+    #     respond = json.loads(result.data.decode("utf8"))
+    #     self.assertEqual(result.status_code, 401)
+    #     self.assertIsInstance(respond, dict)
    
 
     def test_get_menu(self):
@@ -51,14 +51,14 @@ class TestViews(unittest.TestCase):
         self.assertIn('Available Menu', respond)
         self.assertIsInstance(respond, dict)    
 
-    def test_updating_order_status(self):
-        """
-        Method for testing toupdate an order_status by admin
-        """
+    # def test_updating_order_status(self):
+    #     """
+    #     Method for testing toupdate an order_status by admin
+    #     """
        
-        result = self.client().put('/api/v2/orders/1')
-        respond = json.loads(result.data.decode("utf8"))
-        self.assertEqual(result.status_code,401)
-        self.assertIsInstance(respond, dict, )
+    #     result = self.client().put('/api/v2/orders/1')
+    #     respond = json.loads(result.data.decode("utf8"))
+    #     self.assertEqual(result.status_code,401)
+    #     self.assertIsInstance(respond, dict, )
         
     
