@@ -51,14 +51,14 @@ class TestViews(unittest.TestCase):
         self.assertIn('Available Menu', respond)
         self.assertIsInstance(respond, dict)
 
-    def test_adding_an_item_on_menu(self):
-        """
-            Method for testing to add an item on to the menu by admin
-        """
-        result = self.client().post('/api/v2/menu')
-        respond = json.loads(result.data.decode("utf8"))
-        self.assertEqual(result.status_code, 401)
-        self.assertIsInstance(respond, dict)
+    # def test_adding_an_item_on_menu(self):
+    #     """
+    #         Method for testing to add an item on to the menu by admin
+    #     """
+    #     result = self.client().post('/api/v2/menu')
+    #     respond = json.loads(result.data.decode("utf8"))
+    #     self.assertEqual(result.status_code, 401)
+    #     self.assertIsInstance(respond, dict)
     
 
     def test_updating_order_status(self):

@@ -7,11 +7,11 @@ import jwt
 from flask.views import MethodView
 from connect import APP
 from flask import Response
-from api.controller.token_required import token_required
+# from api.controller.token_required import token_required
 
 class PostMenu(MethodView):
     """ add meal option"""
-    @token_required
+    # @token_required
     def post(self):
 
         """ insert a new meal to the menu """

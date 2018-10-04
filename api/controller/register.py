@@ -22,9 +22,6 @@ class RegisterUsers(MethodView):
 
         sql = """INSERT INTO accounts(name,email,phone,password)
                 VALUES(%s,%s,%s,%s) RETURNING id;"""
-                
-        # for sqls in sql:
-        #     if 
         conn = None
         try:
             # read the connection parameters
@@ -42,7 +39,7 @@ class RegisterUsers(MethodView):
             return jsonify({'message':'User succefully registered'}), 201
             cur.close()
         except (Exception, psycopg2.DatabaseError) as error:
-            print(error)
+            return ({'message':'Please provide the right imnputs'})
         finally:
             if conn is not None:
                 conn.close()
