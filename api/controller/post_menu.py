@@ -17,7 +17,7 @@ class PostMenu(MethodView):
         """ insert a new meal to the menu """
 
         sql11 = """INSERT INTO menu (item_name,price,quantity,amount)
-                VALUES(%s,%s,%s,%s);"""
+                VALUES(%s,%s,%s,%s) RETURNING item_id;"""
         
         conn = None
         try:
@@ -35,8 +35,8 @@ class PostMenu(MethodView):
             return jsonify({'message':'Admin has successfully added meal option to the menu'}), 201
             cur.close()
         except (Exception, psycopg2.DatabaseError) as error:
-            print(error)
+            return jsonify({'Message': 'Invalid response'}), 500
         finally:
             if conn is not None:
                 conn.close()
-        return jsonify({'Message': 'Invalid response'})
+        

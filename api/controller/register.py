@@ -39,7 +39,7 @@ class RegisterUsers(MethodView):
             return jsonify({'message':'User succefully registered'}), 201
             cur.close()
         except (Exception, psycopg2.DatabaseError) as error:
-            return ({'message':'Please provide the right imnputs'})
+            return ({'message':'Please provide the right inputs'})
         finally:
             if conn is not None:
                 conn.close()
