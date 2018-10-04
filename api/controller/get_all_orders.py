@@ -5,12 +5,12 @@ from db_connection.config import config
 import jwt
 from flask.views import MethodView
 from connect import APP
-from api.controller.token_required import token_required
+# from api.controller.token_required import token_required
 
 
 class GetAllOrders(MethodView):
     """get all orders"""
-    @token_required
+    # @token_required
     def get(self):
         conn = None
         try:
@@ -31,10 +31,10 @@ class GetAllOrders(MethodView):
             # close communication with the database
             cur.close()
         except (Exception, psycopg2.DatabaseError) as error:
-            print(error)
+            return jsonify({'message':'No id required'}), 404
         finally:
             if conn is not None:
                 conn.close()
 
-        return jsonify({'message':'No id required'}), 404
+        
         

@@ -30,10 +30,10 @@ class GetAnOrderHistory(MethodView):
             # close communication with the database
             cur.close()
         except (Exception, psycopg2.DatabaseError) as error:
-            print(error)
+            return jsonify({'message':'Id doesnot exist'}), 404
         finally:
             if conn is not None:
                 conn.close()
 
-        return jsonify({'message':'Id doesnot exist'}), 404
+        
         

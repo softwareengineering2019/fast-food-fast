@@ -16,8 +16,7 @@ class PostMenu(MethodView):
 
         """ insert a new meal to the menu """
 
-        sql11 = """INSERT INTO menu (item_name,price,quantity,amount)
-                VALUES(%s,%s,%s,%s) RETURNING item_id;"""
+        sql11 = """INSERT INTO menu (item_name,price,quantity,amount) VALUES (%s,%s,%s,%s) RETURNING item_id;"""
         
         conn = None
         try:
@@ -32,7 +31,13 @@ class PostMenu(MethodView):
             # commit the changes to the database
             conn.commit()
             # close communication with the database
-            return jsonify({'message':'Admin has successfully added meal option to the menu'}), 201
+            cur.execute("SELECT item_name,price,quantity,amount FROM menu")
+            tt = cur.fetchall()
+            columns = ('item_name','price','quantity','amount')
+            result = []
+            for row in tt:
+                result.append(dict(zip(columns, row)))
+            return jsonify({'Your order': result}), 201
             cur.close()
         except (Exception, psycopg2.DatabaseError) as error:
             return jsonify({'Message': 'Invalid response'}), 500

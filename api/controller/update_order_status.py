@@ -3,7 +3,7 @@ import psycopg2
 from flask import jsonify, request
 from db_connection.config import config
 import jwt
-from api.controller.token_required import token_required
+# from api.controller.token_required import token_required
 
 from flask.views import MethodView
 from connect import APP
@@ -11,7 +11,7 @@ from connect import APP
 
 class UpdateOrderStatus(MethodView):
     """Update order status based on order id"""
-    @token_required
+    # @token_required
     def put(self,id):
         order_status = request.json['status']
         conn = None
@@ -48,10 +48,10 @@ class UpdateOrderStatus(MethodView):
             # close communication with the database
             cur.close()
         except (Exception, psycopg2.DatabaseError) as error:
-            print(error)
+            return jsonify({'message':'server error'}), 505
         finally:
             if conn is not None:
                 conn.close()
 
-        return jsonify({'message':'server error'}), 505
+        
         

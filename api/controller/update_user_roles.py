@@ -33,10 +33,8 @@ class UpdateUserRoles(MethodView):
             # close communication with the database
             cur.close()
         except (Exception, psycopg2.DatabaseError) as error:
-            print(error)
+            return jsonify({'message':'server error'}), 505
         finally:
             if conn is not None:
                 conn.close()
-
-        return jsonify({'message':'server error'}), 505
         

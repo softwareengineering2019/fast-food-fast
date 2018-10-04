@@ -5,12 +5,12 @@ from db_connection.config import config
 import jwt
 from flask.views import MethodView
 from connect import APP
-from api.controller.token_required import token_required
+# from api.controller.token_required import token_required
 
 
 class FetchSpecificOrder(MethodView):
     """Fetch a specific order by id"""
-    @token_required
+    # @token_required
     def get(self,id):
         conn = None
         try:
@@ -22,7 +22,7 @@ class FetchSpecificOrder(MethodView):
             cur = conn.cursor()
             # execute the INSERT statement
             cur.execute("SELECT order_id,name,rate,quantity,amount,location,status FROM orders WHERE order_id = (%s)", (id,))
-            specific_order = cur.fetchall()
+            specific_order = cur.fetchone()
             columns = ('order_id','name','rate','quantity','amount','location','status'), 200
             result = []
             for row in specific_order:
@@ -32,10 +32,10 @@ class FetchSpecificOrder(MethodView):
             # close communication with the database
             cur.close()
         except (Exception, psycopg2.DatabaseError) as error:
-            print(error)
+            return jsonify({'message':'Id doesnot exist'}), 404
         finally:
             if conn is not None:
                 conn.close()
 
-        return jsonify({'message':'Id doesnot exist'}), 404
+        
         
