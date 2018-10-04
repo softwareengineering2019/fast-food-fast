@@ -63,7 +63,7 @@ class TestViews(unittest.TestCase):
 
     def test_updating_order_status(self):
         """
-            Method for testing toupdate an order_status by admin
+        Method for testing toupdate an order_status by admin
         """
        
         result = self.client().put('/api/v2/orders/1')
